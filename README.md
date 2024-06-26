@@ -3,7 +3,7 @@ A simple responsive signIn page using html and css only.
 
 ## Demo Video
 
-https://github.com/PartikBolan/landing-page/assets/157514773/d8d188a8-cda2-4087-bf0d-012fc16c4439
+https://github.com/PartikBolan/landing-page/assets/157514773/e5e839db-c46a-41a4-b23a-d435b7601ca8
 
 ## Screenshots
 
