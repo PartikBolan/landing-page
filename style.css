@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("assests/background.jpeg");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Cambria;
+}
+.flex{
+    display: flex;
+}
+header{
+    width: 100vw;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    height: 10%;
+}
+.header-logo{
+    align-items: center;
+    padding: .5em;
+    margin-left: 1em;
+}
+
+.logo-image{
+    height: 40px;
+    background-color: rgb(13, 13, 28);
+    mix-blend-mode: luminosity;
+    border-radius: 5px 15px;
+}
+.header-heading{
+    margin-left: .5em;
+    font-size: 1.5em;
+    color: rgb(192, 110, 110);
+}
+.header-menu{
+    gap: 2em;
+    margin-right: 1.5em;
+    list-style-type: none;
+    align-items: center;
+    color: rgb(68, 148, 68);
+    user-select: none; 
+}
+
+.head-items{
+    cursor: pointer;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.head-items::after{
+    content: "";
+    width: 0%;  
+    display: block;
+    height: 2px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    transition: all .2s ease;
+    position: absolute;
+    bottom: 20%;
+}
+.head-items:hover::after{
+    width: 100%;
+    cursor: pointer;
+    text-shadow: #101922;
+}
+.icons-container{
+    display: none;
+    list-style-type:none;
+    text-align: center;
+    background: radial-gradient(at left top, rgb(56, 32, 18), rgba(73, 0, 70, 1.0));
+    box-shadow:  0px 3px 10px 0px rgb(114, 85, 85);
+    border-radius: 5px 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.contact-list:hover .icons-container,
+.contact-list:focus .icons-container{
+    display: block;
+}
+
+.social-icons{
+    padding: .5em .8em;
+    transition: all .2s;
+}
+.social-icons a{
+    text-decoration: none;
+    color: inherit;
+}
+.social-icons:hover{
+    color: rgba(255, 255, 0, 0.719);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+form{
+    color: white;
+    flex-direction: column;
+    width: 25%;
+    padding: 1%;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0, 0.8);
+    margin: 5% auto ;
+    box-shadow: 0px 1px 10px 0px #A68D6E;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    height: 55vh;
+}
+
+.form-heading{
+    text-align: center;
+    margin-top: .5em;
+}
+.username, .password{
+    width: 80%;
+    height: 15%;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    outline: none; 
+    background: transparent;
+    border: 1px solid white; 
+    transition: border-color 0.3s;
+    color: #9aca34;
+
+}
+
+.username::placeholder, .password::placeholder{
+    font-size: 10px;
+}
+.username:focus , .password:focus {
+    border: none;
+    border-bottom: 1.5px solid yellow; 
+    outline: none; 
+}
+
+
+
+.signIn-btn{
+    margin:5%;
+    padding: .7em 1.2em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: green;
+    transition: all .6s ease;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    
+}
+.signIn-btn:hover{
+    background-color: blue;
+    box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.5); 
+    
+}
+
+
+@media only screen and (max-width:950px) {
+    form{
+        margin: 10% auto;
+        width: 45%;
+    }
+    
+}
+@media only screen and (max-width:730px) {
+    form{
+        margin: 15% auto;
+        padding-bottom: 1em;
+
+    }
+    
+}
+@media only screen and (max-width: 500px){
+    header{
+        height: 7%;
+    }
+    .header-heading{
+        font-size: 1em;
+    }
+    form{
+        margin: 30% auto;
+        width: 80%;
+        padding-bottom: 2em;
+    }
+    .username, .password{
+        height: 10%;
+    }
+
+    .logo-image{
+        height: 30px;
+    }
+    .header-menu{
+        gap: 1em;
+        margin-right: 1em;
+    }
+    .head-items{
+        font-size: 14px;
+    }
+    .form-heading{
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width:315px) {
+    header{
+        width: max-content;
+    }
+    .header-heading{
+        display: none;
+    }
+    
+}
